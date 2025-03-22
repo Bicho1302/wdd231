@@ -1,34 +1,78 @@
 /* large.css */
 
-@media screen and (min-width: 768px) {
-    header {
-      justify-content: space-between;
-    }
-  
+
+      /* Media query: hide button on screens 768px and up */
+      @media screen and (min-width: 768px) {
+        #menuButton {
+          display: none !important;
+        }
+        #menuButton {
+            display: block;
+            background: red;
+            padding: 10px;
+            font-size: 1.5rem;
+          }
+          #primaryNav {
+            display: block !important;
+          }
+          #primaryNav ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 1rem;
+          }
+          nav ul {
+            display: flex;
+            flex-direction: row;   /* horizontal layout */
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+          }
+        
+          nav li {
+            list-style: none;
+          }
+        
+          nav a {
+            display: block;
+            padding: 0.5rem 1rem;
+          }
+        }
+        
+      
     /* Hide hamburger button on large screens */
-    #menuButton {
-      display: none;
-    }
-  
+   
     /* Display nav horizontally */
-    nav {
-      display: block;
-    }
-    nav ul {
-      display: flex;
-      gap: 1rem;
-      background-color: transparent;
-      margin: 0;
-    }
-    nav li {
-      border: none;
-    }
-  
+   
     /* Course container as a grid */
     .course-container {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 1rem;
+
     }
+  
+/* Profile pic */
+.profile-pic {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* add margin if needed */
+    margin-right: 0.5rem;
   }
   
+  /* Content images */
+  .content-image {
+    display: block;
+    max-width: 300px; /* or 400px, etc. */
+    height: auto;
+    margin: 0 auto;   /* center the image */
+  }
+  
+  /* Optionally, make them fully responsive */
+  .content-image {
+    max-width: 100%;
+    height: auto;
+  }
+    

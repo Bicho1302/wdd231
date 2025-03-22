@@ -11,11 +11,13 @@ body {
 }
 
 header {
-  display: flex;
-  align-items: center;
-  background-color: #005f73;
-  color: #fff;
-  padding: 0.5rem;
+    display: flex;
+    justify-content: space-between; /* or center if you want everything in the middle */
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #005f73; /* Example teal color */
+    color: #fff;
+  
 }
 
 /* Header Image (Profile Photo) */
@@ -32,14 +34,7 @@ header span {
 }
 
 /* Hamburger menu button for small screens */
-#menuButton {
-  margin-left: auto;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-}
+
 
 /* Navigation (small screen) */
 nav.closed {
@@ -93,10 +88,7 @@ figure {
   max-width: 100%;
 }
 
-figure img {
-  width: 100%;
-  height: auto;
-}
+
 
 figure figcaption {
   text-align: center;
@@ -149,3 +141,72 @@ footer {
   background-color: #94d2bd;
   color: #005f73;
 }
+/* Profile pic */
+.profile-pic {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* add margin if needed */
+    margin-right: 0.5rem;
+  }
+  
+  /* Content images */
+  .content-image {
+    display: block;
+    justify-content:left;
+    max-width: 300px; /* or 400px, etc. */
+    height: auto;
+    margin: 0 auto;   /* center the image */
+  }
+  .location-container {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  .location-container h2 {
+    margin-bottom: 0.5rem;
+  }
+  .location-container img {
+    max-width: 400px; /* or whatever fits your design */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  
+  @media screen and (min-width: 768px) {
+    #menuButton {
+      display: none !important;
+    }
+    #menuButton {
+        display: block;
+        background: red;
+        padding: 10px;
+        font-size: 1.5rem;
+      }
+      #primaryNav {
+        display: block !important;
+      }
+      #primaryNav ul {
+        display: flex;
+        flex-direction: row;
+
+        gap: 1rem;
+      }
+      nav ul {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+    
+      nav a {
+        color: #fff; /* or your preferred color */
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+      }
+    }
+    
+  
