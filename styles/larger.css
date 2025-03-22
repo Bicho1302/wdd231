@@ -1,0 +1,34 @@
+/* large.css */
+
+@media screen and (min-width: 768px) {
+    header {
+      justify-content: space-between;
+    }
+  
+    /* Hide hamburger button on large screens */
+    #menuButton {
+      display: none;
+    }
+  
+    /* Display nav horizontally */
+    nav {
+      display: block;
+    }
+    nav ul {
+      display: flex;
+      gap: 1rem;
+      background-color: transparent;
+      margin: 0;
+    }
+    nav li {
+      border: none;
+    }
+  
+    /* Course container as a grid */
+    .course-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+  }
+  

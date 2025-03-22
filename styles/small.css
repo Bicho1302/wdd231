@@ -1,0 +1,151 @@
+/* small.css */
+
+/* Example Google Font (optional) */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: #005f73;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+/* Header Image (Profile Photo) */
+header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+header span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Hamburger menu button for small screens */
+#menuButton {
+  margin-left: auto;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Navigation (small screen) */
+nav.closed {
+  display: none; /* Hide by default */
+}
+
+nav.open {
+  display: block; /* Show when toggled */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #0a9396;
+}
+
+nav li {
+  border-bottom: 1px solid #ddd;
+}
+
+nav a {
+  display: block;
+  padding: 0.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #94d2bd;
+  color: #005f73;
+}
+
+main {
+  padding: 1rem;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+section {
+  margin-bottom: 1rem;
+}
+
+/* Images in main content */
+figure {
+  margin: 0;
+  max-width: 100%;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+}
+
+figure figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background-color: #005f73;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/* Course container and cards */
+.course-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.course-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+}
+
+/* Completed courses style */
+.course-card.completed {
+  background-color: #94d2bd;
+}
+
+/* Filter buttons */
+.filter-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filter-buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #0a9396;
+  color: #fff;
+  cursor: pointer;
+}
+
+.filter-buttons button:hover {
+  background-color: #94d2bd;
+  color: #005f73;
+}

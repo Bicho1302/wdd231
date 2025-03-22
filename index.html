@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="WDD 231 Course Home Page" />
+  <meta name="author" content="Your Name" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WDD 231 | Course Home Page</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/large.css" />
+
+  <!-- JavaScript (with defer) -->
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+</head>
+<body>
+  <header>
+    <!-- Small personal photo -->
+    <img src="images/yourphoto.jpg" alt="Photo of Your Name" />
+    <!-- Name in a span -->
+    <span>Rubia M. Francesco</span>
+    
+    <!-- "Hamburger" button for small screens -->
+    <button id="menuButton" aria-label="Menu Button">&#9776;</button>
+
+    <!-- Responsive Navigation -->
+    <nav id="primaryNav" class="closed">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#">Chamber</a></li>
+        <li><a href="#">GitHub Profile</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Main heading for the page -->
+    <h1>Home</h1>
+
+    <!-- Section: Course Work -->
+    <section>
+      <h2>Course Work</h2>
+      <ul>
+        <li>Bullet item 1</li>
+        <li>Bullet item 2</li>
+        <li>Bullet item 3</li>
+      </ul>
+    </section>
+
+    <!-- Section: Toloria, Madagascar -->
+    <section>
+      <h2>Toloria, Madagascar</h2>
+      <figure>
+        <img src="images/baobab.jpg" alt="Baobab Trees" />
+        <figcaption>Baobab Trees</figcaption>
+      </figure>
+    </section>
+
+    <!-- Section: Web and Computer Programming Certificate -->
+    <section>
+      <h2>Web and Computer Programming Certificate</h2>
+
+      <!-- Filter Buttons -->
+      <div class="filter-buttons">
+        <button data-filter="all">All</button>
+        <button data-filter="CSE">CSE</button>
+        <button data-filter="WDD">WDD</button>
+      </div>
+
+      <!-- Container where course cards will be injected -->
+      <div id="courseContainer" class="course-container"></div>
+
+      <!-- Dynamic total credits display -->
+      <p id="totalCredits"></p>
+    </section>
+  </main>
+
+  <footer>
+    <!-- First paragraph: dynamic copyright, name, location -->
+    <p>
+      &copy; <span id="year"></span> Rubia Magdalena Francesco | Madagascar
+    </p>
+    <!-- Second paragraph: last modified date -->
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
