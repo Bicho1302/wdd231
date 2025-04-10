@@ -1,0 +1,68 @@
+{
+    "members": [
+      {
+        "name": "Alpha Consulting",
+        "address": "123 Alpha St, Cityville, ST 12345",
+        "phone": "555-123-4567",
+        "website": "https://www.alphaconsulting.com",
+        "image": "alpha.jpeg",
+        "membership": "Gold",
+        "description": "Leading experts in business consulting."
+      },
+      {
+        "name": "Beta Solutions",
+        "address": "456 Beta Ave, Townsville, ST 23456",
+        "phone": "555-234-5678",
+        "website": "https://www.betasolutions.com",
+        "image": "beta.webp",
+        "membership": "Silver",
+        "description": "Innovative IT and technology services."
+      },
+      {
+        "name": "Gamma Industries",
+        "address": "789 Gamma Blvd, Village, ST 34567",
+        "phone": "555-345-6789",
+        "website": "https://www.gammaindustries.com",
+        "image": "gamma.webp",
+        "membership": "Bronze",
+        "description": "Quality manufacturing and industrial products."
+      },
+      {
+        "name": "Delta Enterprises",
+        "address": "101 Delta Rd, Metropolis, ST 45678",
+        "phone": "555-456-7890",
+        "website": "https://www.deltaenterprises.com",
+        "image": "delta.jpeg",
+        "membership": "Gold",
+        "description": "Pioneers in creative solutions and marketing."
+      },
+      {
+        "name": "Epsilon Group",
+        "address": "202 Epsilon Ln, Capital City, ST 56789",
+        "phone": "555-567-8901",
+        "website": "https://www.epsilongroup.com",
+        "image": "epsilon.jpeg",
+        "membership": "Silver",
+        "description": "Experts in finance and investment strategies."
+      },
+      {
+        "name": "Zeta Holdings",
+        "address": "303 Zeta Pkwy, Urbantown, ST 67890",
+        "phone": "555-678-9012",
+        "website": "https://www.zetaholdings.com",
+        "image": "zeta.jpeg",
+        "membership": "Bronze",
+        "description": "Comprehensive legal and business services."
+      },
+      {
+        "name": "Eta Marketing",
+        "address": "404 Eta Ct, Business City, ST 78901",
+        "phone": "555-789-0123",
+        "website": "https://www.etamarketing.com",
+        "image": "eta.jpg",
+        "membership": "Gold",
+        "description": "Creative marketing and advertising solutions."
+      }
+    ]
+  }
+  

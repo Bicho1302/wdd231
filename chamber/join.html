@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Standard Meta Tags -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Victor Salazar">
+  
+  <meta name="description" content="Official Chamber of Commerce website. Join our community to network, learn about local events, and discover member spotlights.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.ico">
+
+  <!-- Social Media Meta Tags -->
+  <meta property="og:title" content="Chamber of Commerce | Home">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/chamberheroimage2">
+  <meta property="og:url" content="https://www.examplechamber.com">
+
+  <!-- CSS: Normalize / Reset and Base Styles -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+</head>
+<Title>Registration Chamber of Commerce</Title>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1>Chamber of Commerce</h1>
+      <!-- Hamburger Button for Mobile Navigation -->
+      <button id="nav-toggle" aria-label="Toggle Navigation">
+        <span class="hamburger"></span>
+      </button>
+      <!-- Main Navigation -->
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="join.html">Membership</a></li>
+          <li><a href="directory.html">Directory</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+        <!-- Form Section -->
+        <section class="form-section">
+          <h2>Application Form</h2>
+          <form method="get" action="thankyou.html" id="membershipForm">
+            <p>
+              <label for="firstName">First Name:
+                <input type="text" name="firstName" id="firstName" required>
+              </label>
+            </p>
+            <p>
+              <label for="lastName">Last Name:
+                <input type="text" name="lastName" id="lastName" required>
+              </label>
+            </p>
+            <p>
+              <label for="title">Title/Position (min. 7 letters, hyphens and spaces allowed):
+                <input type="text" name="title" id="title" 
+                       pattern="[A-Za-z\s\-]{7,}" 
+                       title="Please enter at least 7 characters using letters, hyphens, and spaces only.">
+              </label>
+            </p>
+            <p>
+              <label for="email">Email:
+                <input type="email" name="email" id="email" 
+                       placeholder="example@byui.edu" required>
+              </label>
+            </p>
+            <p>
+              <label for="phone">Mobile Phone:
+                <input type="tel" name="phone" id="phone" required>
+              </label>
+            </p>
+            <p>
+              <label for="organization">Organization Name:
+                <input type="text" name="organization" id="organization" required>
+              </label>
+            </p>
+            <p>
+              <label for="membership">Membership Level:
+                <select name="membership" id="membership">
+                  <option value="np">NP Membership (Nonprofit – no fee)</option>
+                  <option value="bronze">Bronze Membership</option>
+                  <option value="silver">Silver Membership</option>
+                  <option value="gold">Gold Membership</option>
+                </select>
+              </label>
+            </p>
+            <p>
+              <label for="description">Organization Description:
+                <textarea name="description" id="description" rows="5"></textarea>
+              </label>
+            </p>
+            <!-- Hidden timestamp field: set to the current date/time when the page loads -->
+            <input type="hidden" name="timestamp" id="timestamp">
+            <p class="submit-container">
+              <input type="submit" value="Submit Application">
+            </p>
+          </form>
+        </section>
+        <!-- Membership Benefits Sidebar -->
+        <aside class="benefits-section">
+          <h2>Membership Benefits</h2>
+          <ul>
+            <li><strong>NP Membership:</strong> No fee for nonprofits; community recognition.</li>
+            <li><strong>Bronze Membership:</strong> Access to member-only events and newsletters.</li>
+            <li><strong>Silver Membership:</strong> Bronze benefits plus discounts on training and events.</li>
+            <li><strong>Gold Membership:</strong> Silver benefits plus premium advertising and event discounts.</li>
+          </ul>
+        </aside>
+      </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <address>
+        <p>
+          Chamber of Commerce<br>
+          123 Business Blvd, Suite 100<br>
+          Spanish Fork, UT 84660<br>
+          Email: victorsn13022003@gmail.com<br>
+          Phone: (801) 850-4777
+        </p>
+      </address>
+      <p>
+        Developed by Victor Salazar | Project for WDD 231 | Last Modified: 
+        <span id="lastModified"></span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Dynamic Content -->
+  <script>
+    // Dynamically display the last modified date of the page
+    document.getElementById('lastModified').textContent = document.lastModified;
+
+    // Responsive Navigation Toggle Script
+    const navToggle = document.getElementById('nav-toggle');
+    const mainNav = document.getElementById('main-nav');
+
+    navToggle.addEventListener('click', function() {
+      mainNav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
