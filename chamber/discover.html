@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Standard Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Victor Salazar">
+  <meta property="og:title" content="My Course Home Page">
+<meta property="og:description" content="Welcome to my WDD course project!">
+<meta property="og:image" content="https://bicho1302.github.io/images/preview.jpg">
+<meta property="og:url" content="https://bicho1302.github.io/wdd230">
+
+  <!-- Page Title and Description -->
+  <title>Chamber of Commerce and Discover</title>
+  <meta name="description" content="Discover our area! Learn about local demographics, statistics, and view beautiful imagery of our community.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <script src="scripts/getdates.js" defer></script>
+  
+
+</head>
+<body>
+  <!-- Header and Navigation (preserved from your home page) -->
+  <header>
+    <div class="container">
+      <h1>Chamber of Commerce</h1>
+      <button id="nav-toggle" aria-label="Toggle Navigation">
+        <span class="hamburger"></span>
+      </button>
+      <!-- Responsive Navigation -->
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="join.html">Membership</a></li>
+          <li><a href="directory.html">Directory</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Main Content: Sidebar Layout -->
+  <main>
+    <div class="container grid-container">
+      <!-- Sidebar Section -->
+      <aside class="sidebar">
+        <h2>Discover Our Area</h2>
+        <!-- Dynamic message from localStorage will display here -->
+        <p id="visitMessage"></p>
+        
+        <section class="demographics">
+          <h3>Local Demographics</h3>
+          <ul>
+            <li>Population: 50,000</li>
+            <li>Median Age: 35</li>
+            <li>Households: 20,000</li>
+          </ul>
+        </section>
+        
+        <section class="statistics">
+          <h3>Area Statistics</h3>
+          <ul>
+            <li>Business Growth: 8% YoY</li>
+            <li>Employment Rate: 95%</li>
+            <li>Median Income: $55,000</li>
+          </ul>
+        </section>
+      </aside>
+      
+      <!-- Gallery Section -->
+       
+      <section class="gallery">
+        <figure>
+          <img src="images/landmark1.webp" alt="Local Landmark 1" loading="lazy">
+          <figcaption>Local Landmark 1</figcaption>
+        </figure>
+        <figure>
+          <img src="images/landmark2.webp" alt="Local Landmark 2" loading="lazy">
+          <figcaption>Local Landmark 2</figcaption>
+        </figure>
+        <figure>
+          <img src="images/localpark.webp" alt="Local Park" loading="lazy">
+          <figcaption>Local Park</figcaption>
+        </figure>
+        <figure>
+          <img src="images/dowtown.webp" alt="Historic Downtown" loading="lazy">
+          <figcaption>Historic Downtown</figcaption>
+        </figure>
+        <figure>
+          <img src="images/scenicroute.webp" alt="Scenic Route" loading="lazy">
+          <figcaption>Scenic Route</figcaption>
+        </figure>
+        <figure>
+          <img src="images/culturalcenter.webp" alt="Cultural Center" loading="lazy">
+          <figcaption>Cultural Center</figcaption>
+        </figure>
+      </section>
+    </div>
+  </main>
+  
+  <!-- Footer (preserved from your home page) -->
+  <footer>
+    <div class="container">
+      <address>
+        <p>
+            Chamber of Commerce<br>
+            123 Business Blvd, Suite 100<br>
+            Spanish Fork, UT 84660<br>
+            Email: victorsn13022003@gmail.com<br>
+            Phone: (801) 850-4777
+        </p>
+      </address>
+      <p>
+        Developed by Your Victor Salazar | Project for WDD 230 | Last Modified: 
+        <span id="lastModified"></span>
+      </p>
+    </div>
+  </footer>
+  
+  <!-- JavaScript for Local Storage Visit Message and Last Modified Date -->
+  
+</body>
+</html>
