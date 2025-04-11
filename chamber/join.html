@@ -1,150 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Standard Meta Tags -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Victor Salazar">
-  
-  <meta name="description" content="Official Chamber of Commerce website. Join our community to network, learn about local events, and discover member spotlights.">
-
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico">
-
-  <!-- Social Media Meta Tags -->
-  <meta property="og:title" content="Chamber of Commerce | Home">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://bicho1302.github.io/wdd231/chamber/join.html">
-  <meta property="og:url" content="https://bicho1302.github.io/wdd231/chamber/join.html">
-
-  <!-- CSS: Normalize / Reset and Base Styles -->
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/base.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Victor Salazar" />
+  <meta name="description" content="Official Chamber of Commerce website." />
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/base.css" />
   <script src="scripts/join.js" defer></script>
   <title>Chamber of Commerce Join Page</title>
+  <style>
+    body {
+      overflow-x: hidden; /* fix for horizontal scroll */
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+      max-width: 600px;
+    }
+
+    .form-section {
+      padding: 1rem;
+    }
+
+    .benefits-section {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 0 1rem;
+      }
+    }
+
+    nav.breadcrumb {
+      margin: 1rem 0;
+    }
+
+    nav.breadcrumb a {
+      text-decoration: none;
+      color: #333;
+      margin-right: 0.5rem;
+    }
+  </style>
 </head>
-
-
-
 <body>
-  <!-- Header Section -->
   <header>
     <div class="container">
       <h1>Chamber of Commerce Join</h1>
-      <!-- Hamburger Button for Mobile Navigation -->
       <button id="nav-toggle" aria-label="Toggle Navigation">
         <span class="hamburger"></span>
       </button>
-      <!-- Main Navigation -->
       <nav id="main-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="discover.html">Discover</a></li>
-          <li><a href="join.html">Membership</a></li>
+          <li><a href="join.html" class="active">Membership</a></li>
           <li><a href="directory.html">Directory</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Main Content -->
   <main>
-
     <div class="container">
-      <h1>Chamber of Commerce Join Form</h1>
-        <!-- Form Section -->
-        <section class="form-section">
-          
-          <form method="get" action="thankyou.html" id="membershipForm">
-            <p>
-              <label for="firstName">First Name:
-                <input type="text" name="firstName" id="firstName" required>
-              </label>
-            </p>
-            <p>
-              <label for="lastName">Last Name:
-                <input type="text" name="lastName" id="lastName" required>
-              </label>
-            </p>
-            <p>
-              <label for="title">Title/Position (min. 7 letters, hyphens and spaces allowed):
-                <input type="text" name="title" id="title" 
-                       pattern="[A-Za-z\s\-]{7,}" 
-                       title="Please enter at least 7 characters using letters, hyphens, and spaces only.">
-              </label>
-            </p>
-            <p>
-              <label for="email">Email:
-                <input type="email" name="email" id="email" 
-                       placeholder="example@byui.edu" required>
-              </label>
-            </p>
-            <p>
-              <label for="phone">Mobile Phone:
-                <input type="tel" name="phone" id="phone" required>
-              </label>
-            </p>
-            <p>
-              <label for="organization">Organization Name:
-                <input type="text" name="organization" id="organization" required>
-              </label>
-            </p>
-            <p>
-              <label for="membership">Membership Level:
-                <select name="membership" id="membership">
-                  <option value="np">NP Membership (Nonprofit – no fee)</option>
-                  <option value="bronze">Bronze Membership</option>
-                  <option value="silver">Silver Membership</option>
-                  <option value="gold">Gold Membership</option>
-                </select>
-              </label>
-            </p>
-            <p>
-              <label for="description">Organization Description:
-                <textarea name="description" id="description" rows="5"></textarea>
-              </label>
-            </p>
-            <!-- Hidden timestamp field: set to the current date/time when the page loads -->
-            <input type="hidden" name="timestamp" id="timestamp">
-            <p class="submit-container">
-              <input type="submit" value="Submit Application">
-            </p>
-          </form>
-        </section>
-        <!-- Membership Benefits Sidebar -->
-        <aside class="benefits-section">
-          <h2>Membership Benefits</h2>
-          <ul>
-            <li><strong>NP Membership:</strong> No fee for nonprofits; community recognition.</li>
-            <li><strong>Bronze Membership:</strong> Access to member-only events and newsletters.</li>
-            <li><strong>Silver Membership:</strong> Bronze benefits plus discounts on training and events.</li>
-            <li><strong>Gold Membership:</strong> Silver benefits plus premium advertising and event discounts.</li>
-          </ul>
-        </aside>
-      </div>
+
+      <!-- Breadcrumbs -->
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a> › 
+        <span>Join</span>
+      </nav>
+
+      <h2>Join the Chamber</h2>
+
+      <section class="form-section">
+        <form method="get" action="thankyou.html" id="membershipForm">
+          <label>
+            First Name:
+            <input type="text" name="firstName" id="firstName" required autocomplete="given-name" />
+          </label>
+          <label>
+            Last Name:
+            <input type="text" name="lastName" id="lastName" required autocomplete="family-name" />
+          </label>
+          <label>
+            Title/Position:
+            <input type="text" name="title" id="title" 
+              pattern="[A-Za-z\s\-]{7,}" 
+              title="At least 7 characters using letters, hyphens, and spaces only."
+              autocomplete="organization-title" />
+          </label>
+          <label>
+            Email:
+            <input type="email" name="email" id="email" placeholder="example@byui.edu" required autocomplete="email" />
+          </label>
+          <label>
+            Mobile Phone:
+            <input type="tel" name="phone" id="phone" required autocomplete="tel" />
+          </label>
+          <label>
+            Organization Name:
+            <input type="text" name="organization" id="organization" required autocomplete="organization" />
+          </label>
+          <label>
+            Membership Level:
+            <select name="membership" id="membership">
+              <option value="np">NP Membership (Nonprofit – no fee)</option>
+              <option value="bronze">Bronze Membership</option>
+              <option value="silver">Silver Membership</option>
+              <option value="gold">Gold Membership</option>
+            </select>
+          </label>
+          <label>
+            Organization Description:
+            <textarea name="description" id="description" rows="5" autocomplete="off"></textarea>
+          </label>
+          <input type="hidden" name="timestamp" id="timestamp" />
+          <input type="submit" value="Submit Application" />
+        </form>
+      </section>
+
+      <aside class="benefits-section">
+        <h2>Membership Benefits</h2>
+        <ul>
+          <li><strong>NP Membership:</strong> No fee for nonprofits; community recognition.</li>
+          <li><strong>Bronze Membership:</strong> Access to member-only events and newsletters.</li>
+          <li><strong>Silver Membership:</strong> Bronze benefits plus discounts on training and events.</li>
+          <li><strong>Gold Membership:</strong> Silver benefits plus premium advertising and event discounts.</li>
+        </ul>
+      </aside>
+    </div>
   </main>
 
-  <!-- Footer Section -->
   <footer>
     <div class="container">
       <address>
         <p>
-          Chamber of Commerce<br>
-          123 Business Blvd, Suite 100<br>
-          Spanish Fork, UT 84660<br>
-          Email: victorsn13022003@gmail.com<br>
+          Chamber of Commerce<br />
+          123 Business Blvd, Suite 100<br />
+          Spanish Fork, UT 84660<br />
+          Email: victorsn13022003@gmail.com<br />
           Phone: (801) 850-4777
         </p>
       </address>
-      <p>
-        Developed by Victor Salazar | Project for WDD 231 | Last Modified: 
-        <span id="lastModified"></span>
-      </p>
+      <p>Developed by Victor Salazar | Project for WDD 231 | Last Modified: <span id="lastModified"></span></p>
     </div>
   </footer>
 
-  <!-- JavaScript for Dynamic Content -->
- 
+  <script>
+    // Set timestamp
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("timestamp").value = new Date().toISOString();
+      document.getElementById("lastModified").textContent = document.lastModified;
+    });
+  </script>
 </body>
 </html>

@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Thank You</title>
-  <meta name="author" content="Victor Salazar">
-  <!-- Page Title and Description -->
-  <meta name="description" content="thank you page.">
-  <link rel="icon" type="image/png" href="images/favicon.ico">
+  <meta name="author" content="Victor Salazar" />
+  <meta name="description" content="Thank you page showing submitted membership application details." />
+  <link rel="icon" type="image/png" href="images/favicon.ico" />
   <style>
-    
-    /* Basic styling to match site pattern (adjust as needed) */
     body {
       font-family: sans-serif;
       background: #f4f4f4;
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
     }
     header, nav, main, footer {
       max-width: 900px;
@@ -31,6 +29,7 @@
       list-style: none;
       text-align: center;
       padding: 0;
+      margin: 0;
     }
     nav ul li {
       display: inline;
@@ -48,6 +47,17 @@
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+    .submitted-data {
+      text-align: left;
+      margin-top: 2em;
+      padding: 1em;
+      background-color: #eef6ff;
+      border-left: 5px solid #003366;
+      border-radius: 5px;
+    }
+    .submitted-data p {
+      margin: 0.5em 0;
+    }
     footer {
       background: #003366;
       color: #fff;
@@ -60,6 +70,7 @@
   <header>
     <h1>Thank You!</h1>
   </header>
+
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -68,11 +79,47 @@
       <li><a href="directory.html">Directory</a></li>
     </ul>
   </nav>
+
   <main>
     <p>We appreciate your interest and the time you took to complete the application. Your submission has been received and we will be in touch shortly.</p>
+
+    <div class="submitted-data" id="submittedData">
+      <h2>Submission Details:</h2>
+      <!-- Data will be populated here -->
+    </div>
   </main>
+
   <footer>
-    <p>&copy; 2025 wdd230. All rights reserved.</p>
+    <p>&copy; 2025 WDD 231. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Extract query parameters and display in a list
+    const params = new URLSearchParams(window.location.search);
+    const output = document.getElementById("submittedData");
+
+    if ([...params].length === 0) {
+      output.innerHTML = "<p>No submission data found.</p>";
+    } else {
+      const fields = {
+        firstName: "First Name",
+        lastName: "Last Name",
+        title: "Title/Position",
+        email: "Email",
+        phone: "Phone",
+        organization: "Organization",
+        membership: "Membership Level",
+        description: "Organization Description",
+        timestamp: "Submission Timestamp"
+      };
+
+      let html = "";
+      for (const [key, label] of Object.entries(fields)) {
+        const value = params.get(key) || "Not provided";
+        html += `<p><strong>${label}:</strong> ${decodeURIComponent(value)}</p>`;
+      }
+      output.innerHTML += html;
+    }
+  </script>
 </body>
 </html>
