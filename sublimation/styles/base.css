@@ -117,13 +117,14 @@ body {
   
   /* Responsive Nav Toggle */
   #menu-toggle {
-    margin-left: auto;
+    display: none;
     background: none;
     border: none;
     font-size: 2rem;
     color: #00CED1;
     cursor: pointer;
   }
+  
   /* Navigation */
 header {
     position: sticky;
