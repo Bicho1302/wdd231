@@ -1,0 +1,66 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with Sublimation Station for custom orders and inquiries.">
+  <title>Contact - Sublimation Station</title>
+  <link rel="stylesheet" href="styles/base.css">
+  <script defer src="scripts/contact.js"></script>
+</head>
+<body>
+    <header>
+      <div class="container">
+        <h1>Sublimation Station</h1>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  
+    <main class="container">
+      <h2>Contact Us</h2>
+      <p>If you’re interested in placing a custom order or have any questions, feel free to reach out through the form below.</p>
+  
+      <form id="contact-form" class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" autocomplete="name" required>
+  
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+        
+        <label for="product">Product Type:</label>
+        <select id="product" name="product">
+          <option value="">Select a product</option>
+          <option value="Mug">Mug</option>
+          <option value="T-Shirt">T-Shirt</option>
+          <option value="Phone Case">Phone Case</option>
+          <option value="Mouse Pad">Mouse Pad</option>
+          <option value="Keychain">Keychain</option>
+          <option value="Notebook">Notebook</option>
+          <option value="Pillow Case">Pillow Case</option>
+          <option value="Hat">Hat</option>
+          <option value="Canvas Print">Canvas Print</option>
+          <option value="Blanket">Blanket</option>
+          <option value="Other">Other</option>
+        </select>
+  
+        <label for="message">Custom Notes:</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+  
+        <button type="submit">Send</button>
+      </form>
+    </main>
+
+  <footer>
+    <p>&copy; 2025 Sublimation Station</p>
+    <a href="attribution.html">Attributions</a>
+  </footer>
+</body>
+</html>
