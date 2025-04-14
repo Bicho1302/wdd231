@@ -117,10 +117,12 @@ body {
   
   /* Responsive Nav Toggle */
   #menu-toggle {
-    display: none;
+    margin-left: auto;
     background: none;
     border: none;
     font-size: 2rem;
+    color: #00CED1;
+    cursor: pointer;
   }
   /* Navigation */
 header {
@@ -130,6 +132,11 @@ header {
     background-color: #ffffff;
     border-bottom: 1px solid #e0e0e0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  .header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   
   nav ul {
