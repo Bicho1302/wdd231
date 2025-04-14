@@ -348,6 +348,15 @@ header {
       transform: translateY(0);
     }
   }
+  .site-title {
+    text-decoration: none;
+    color: #00CED1;
+    font-size: inherit;
+  }
+  
+  .site-title:hover {
+    text-decoration: none;
+  }
   
   @media (max-width: 768px) {
     #menu-toggle {
