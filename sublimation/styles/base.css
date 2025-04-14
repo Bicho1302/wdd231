@@ -357,6 +357,32 @@ header {
   .site-title:hover {
     text-decoration: none;
   }
+  nav {
+    background-color: white;
+    border-top: 1px solid #eee;
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    animation: slideDown 0.4s ease forwards;
+  }
+  
+  .nav-links.show {
+    display: flex;
+  }
+  
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   
   @media (max-width: 768px) {
     #menu-toggle {
@@ -372,5 +398,37 @@ header {
     .nav-links.show {
       display: flex;
     }
+    @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          text-align: center;
+          background-color: white;
+          padding: 1rem;
+          border-top: 1px solid #eee;
+          border-bottom: 1px solid #ddd;
+          animation: slideDown 0.4s ease forwards;
+        }
+      
+        .nav-links.show {
+          display: flex;
+        }
+      
+        .nav-links li {
+          margin: 0.5rem 0;
+        }
+      }
+      
+      /* Slide down animation */
+      @keyframes slideDown {
+        0% {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
   }
   
