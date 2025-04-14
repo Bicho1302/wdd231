@@ -1,0 +1,18 @@
+[
+    { "id": 1, "name": "Custom Mug", "description": "Full wrap sublimated ceramic mug.", "price": 12.99, "category": "Drinkware", "image": "images/mug.jpg" },
+    { "id": 2, "name": "T-Shirt", "description": "Sublimated cotton-blend t-shirt.", "price": 18.99, "category": "Apparel", "image": "images/shirt.jpg" },
+    { "id": 3, "name": "Phone Case", "description": "Glossy finish personalized phone case.", "price": 15.50, "category": "Accessories", "image": "images/phonecase.jpg" },
+    { "id": 4, "name": "Mouse Pad", "description": "Vibrant color mouse pad for office use.", "price": 10.00, "category": "Office", "image": "images/mousepad.jpg" },
+    { "id": 5, "name": "Keychain", "description": "Custom shape and print keychains.", "price": 5.00, "category": "Accessories", "image": "images/keychain.jpg" },
+    { "id": 6, "name": "Tote Bag", "description": "Reusable tote bag with custom artwork.", "price": 14.99, "category": "Bags", "image": "images/totebag.jpg" },
+    { "id": 7, "name": "Apron", "description": "Kitchen apron with unique sublimated design.", "price": 16.00, "category": "Kitchen", "image": "images/apron.jpg" },
+    { "id": 8, "name": "Notebook", "description": "Custom cover spiral notebook.", "price": 9.50, "category": "Stationery", "image": "images/notebook.jpg" },
+    { "id": 9, "name": "Pillow Case", "description": "Soft pillow case with custom design.", "price": 11.00, "category": "Home Decor", "image": "images/pillow.jpg" },
+    { "id": 10, "name": "Hat", "description": "Stylish cap with sublimated logo.", "price": 13.99, "category": "Apparel", "image": "images/hat.jpg" },
+    { "id": 11, "name": "Coaster Set", "description": "Set of 4 cork coasters.", "price": 8.99, "category": "Home Decor", "image": "images/coasters.jpg" },
+    { "id": 12, "name": "Wallet", "description": "Custom artwork PU leather wallet.", "price": 19.99, "category": "Accessories", "image": "images/wallet.jpg" },
+    { "id": 13, "name": "Canvas Print", "description": "Wall art canvas with your photo.", "price": 29.99, "category": "Art", "image": "images/canvas.jpg" },
+    { "id": 14, "name": "Water Bottle", "description": "Insulated bottle with printed design.", "price": 17.99, "category": "Drinkware", "image": "images/bottle.jpg" },
+    { "id": 15, "name": "Blanket", "description": "Cozy fleece blanket with family photo.", "price": 24.99, "category": "Home Decor", "image": "images/blanket.jpg" }
+  ]
+  

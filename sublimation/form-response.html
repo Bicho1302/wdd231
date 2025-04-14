@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Submission</title>
+</head>
+<body>
+  <h2>Thank you!</h2>
+  <div id="form-data-display"></div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById('form-data-display').innerHTML =
+      `<p>Name: ${params.get('name')}</p>
+       <p>Email: ${params.get('email')}</p>
+       <p>Message: ${params.get('message')}</p>`;
+  </script>
+</body>
+</html>
