@@ -289,6 +289,47 @@ header {
   .form-buttons .cta-button:hover {
     background-color: #009ba0;
 }
+.filter-btn {
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid #00CED1;
+    border-radius: 25px;
+    background-color: transparent;
+    color: #00CED1;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin: 0.5rem;
+  
+    /* animation */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+  }
+  
+  /* make stagger effect using nth-child (up to 9) */
+  .product-filters button:nth-child(1) { animation-delay: 0s; }
+  .product-filters button:nth-child(2) { animation-delay: 0.05s; }
+  .product-filters button:nth-child(3) { animation-delay: 0.1s; }
+  .product-filters button:nth-child(4) { animation-delay: 0.15s; }
+  .product-filters button:nth-child(5) { animation-delay: 0.2s; }
+  .product-filters button:nth-child(6) { animation-delay: 0.25s; }
+  .product-filters button:nth-child(7) { animation-delay: 0.3s; }
+  .product-filters button:nth-child(8) { animation-delay: 0.35s; }
+  .product-filters button:nth-child(9) { animation-delay: 0.4s; }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
 @keyframes fadeInUp {
     from {
       opacity: 0;
